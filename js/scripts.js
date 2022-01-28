@@ -22,9 +22,9 @@ let PokemonList= [
 console.log(PokemonList);
 
 for (let i = 0; i < PokemonList.length; i++) {
-  if(PokemonList[i].height > 3) {
+  if(PokemonList[i].height > 3.5) {
     document.write('<p>' +  PokemonList[i].name + ( ', height: ' )+ PokemonList[i].height + ( " (Wow, That\'s big !!)") + '<p>');
  } else {
    document.write('<p>' +  PokemonList[i].name + ( ', height: ' )+ PokemonList[i].height + ( " (That's not so big)") + '<p>');
-  }
+ }
 };
