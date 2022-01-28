@@ -1,7 +1,7 @@
 alert('Hello world');
 
 //Added square brackets to 'fire' type.
-let pokemonList = [
+let PokemonList= [
   {
     name: 'Bulbasaur',
     height: 2.04,
@@ -16,15 +16,15 @@ let pokemonList = [
     name: 'Gengar',
     height: 4.11,
     types: ['ghost', 'poison'],
-  },
-];
+  }
+]
 
-for (let i = 0; i < pokemonList.length; i++) {
-  document.write('${pokemonList.name} (height: ${pokemonList[i].height})')<br>;
+console.log(PokemonList);
 
-  if(pokemonList[i].height > 0.6){
-    document.write("${Wow, that's big!!}");
-  }else(pokemonList[i].height <= 0.6){
-    document.write("${That's a regular size}");
-  },
+for (let i = 0; i < PokemonList.length; i++) {
+  if(PokemonList[i].height > 3) {
+    document.write('<p>' +  PokemonList[i].name + ( ', height: ' )+ PokemonList[i].height + ( " (Wow, That\'s big !!)") + '<p>');
+ } else {
+   document.write('<p>' +  PokemonList[i].name + ( ', height: ' )+ PokemonList[i].height + ( " (That's not so big)") + '<p>');
+  }
 };
