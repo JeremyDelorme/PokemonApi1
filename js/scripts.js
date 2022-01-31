@@ -1,33 +1,39 @@
-//Creating list of three pokemons with three different attributes
 
-let PokemonList= [
+// Display the data on the page as an unordered list
+document.write('<ul class="pokemon-list">');
+// List of Pokemons with attributes
+let pokemonList = [
   {
     name: 'Bulbasaur',
     height: 2.04,
-    types: ['grass', 'poison'],
+    types: ['grass', 'poison']
   },
   {
     name: 'Charmander',
     height: 2.00,
-    types: ['fire'],
+    types: ['fire']
   },
   {
     name: 'Gengar',
     height: 4.11,
-    types: ['ghost', 'poison'],
-  }
+    types: ['ghost', 'poison']
+  },
 ]
 
-console.log(PokemonList);
+// For loop
+for (let i = 0; i < pokemonList.length; i++) {
+  let currentPokemon = pokemonList[i];
 
-//Creating a for loop that iterates over each item in pokemonList
-
-for (let i = 0; i < PokemonList.length; i++) {
-  //adding 'if' condition to pokemons over 3.5 of height
-  if(PokemonList[i].height > 3.5) {
-    document.write('<p>' +  PokemonList[i].name + ( ', height: ' )+ PokemonList[i].height + ( " (Wow, That\'s big !!)") + '<p>');
-  //adding 'else' condition to all other pokemons
- } else {
-   document.write('<p>' +  PokemonList[i].name + ( ', height: ' )+ PokemonList[i].height + ( " (That's not so big)") + '<p>');
- }
-};
+  document.write(`
+    <li class="pokemon-list__item">
+      ${currentPokemon.name} (height: <span>${currentPokemon.height}</span>)
+  `);
+  // If condition
+  if (currentPokemon.height > 3.5) {
+    document.write(' - Wow, that\'s big!');
+  } else if (currentPokemon.height <= 3.5) {
+    document.write(' - Oh, that\'s not so big');
+  }
+  document.write('</li>');
+}
+document.write('</ul>');
