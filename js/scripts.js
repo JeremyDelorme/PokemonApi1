@@ -1,47 +1,51 @@
 // Creating the array pokemonList
 
-let pokemonList = [
-  {
-    name: 'Bulbasaur',
-    height: 2.04,
-    types: ['grass', 'poison']
-  },
-  {
-    name: 'Charmander',
-    height: 2.00,
-    types: ['fire']
-  },
-  {
-    name: 'Gengar',
-    height: 4.11,
-    types: ['ghost', 'poison']
-  },
-];
+let pokemonRepository = (function() {
+  let pokemonList = [];
+    pokemonList[0] = {
+      name: 'Bulbasaur',
+      height: 2.04,
+      types: ['grass', 'poison']
+    },
+    pokemonList[1] = {
+      name: 'Charmander',
+      height: 2.00,
+      types: ['fire']
+    },
+    pokemonList[2] = {
+      name: 'Gengar',
+      height: 4.11,
+      types: ['ghost', 'poison']
+    }
+  };
 
-// Writing array as a unordered list from index.html
+    function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
 
-document.write('<ul class="pokemon-list">');
+    function getAll() {
+      return pokemonList;
+    }
 
-// Creating forEach loop
+    return {
+      add: add,
+      getAll: getAll,
+    };
 
-pokemonList.forEach(function(pokemon) {
+  })();
 
-  // 1. Writing name + height of each pokemon
-  // 2. Making each pokemon an item of unordered list pokemonList
-  document.write(`
-    <li class="pokemon-list__item">
-      ${pokemon.name} ${'mesures'} ${pokemon.height} ${'cm:'}
-  `);
+  function printArrayDetails(pokemon){
+    let output = "";
+    list.forEach(function(pokemon){
+      output = `${pokemon.name} ${'mesures'} ${pokemon.height} ${'cm:'}`;
+      if (pokemon.height > 3.5) {
+       document.write(' Wow, that\'s big!');
+      } else if (pokemon.height <= 3.5) {
+      document.write(' Oh, that\'s not so big');
+      }
+    });
+    return output;
+  };
 
-  // Creating if...else condition statement
-
-  if (pokemon.height > 3.5) {
-    document.write(' Wow, that\'s big!');
-  } else if (pokemon.height <= 3.5) {
-    document.write(' Oh, that\'s not so big');
-  }
-})
-
-    document.write('</li>');
-
-document.write('</ul>');
+  let string = printArrayDetails(pokemonRepository.getAll());
+  document.getElementById('pokemon-list') = string
