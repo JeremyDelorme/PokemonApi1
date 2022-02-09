@@ -1,3 +1,4 @@
+
 //Creating Pokemon Repository as IIFE
 let pokemonRepository = (function() {
 
@@ -62,9 +63,9 @@ document.write('<ul>');
 pokemonRepository.getAll().forEach(function(pokemon) {
 
   //Writing pokemons as items of the unordered list pokemonList
-  document.write('<li>');
     document.write(`
-    ${pokemon.name} ${' mesures '} ${pokemon.height} ${'meters: '}
+      <li class="pokemon-list__item">
+        ${pokemon.name} ${' mesures '} ${pokemon.height} ${'meters: '}
     `);
 
   //Creating "if....else" condition
