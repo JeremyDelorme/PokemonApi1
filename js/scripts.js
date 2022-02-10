@@ -1,33 +1,33 @@
 
-//Creating Pokemon Repository as IIFE
+
+
+//Created a Pokemon Repository as IIFE
 let pokemonRepository = (function() {
 
-  //Creating Array of Pokemons
+  //Created an Array of Pokemons
   let pokemonList = [
     {
       name: 'Bulbasaur',
       height: 2.04,
-      types: ['grass', 'poison']
+      type: ['grass', 'poison']
     },
     {
       name: 'Charmander',
       height: 2.00,
-      types: ['fire']
+      type: ['fire']
     },
     {
       name: 'Gengar',
       height: 4.11,
-      types: ['ghost', 'poison']
+      type: ['ghost', 'poison']
     }
   ];
 
-  //Creating a function for adding a Pokemon
+  //Created a function for adding a Pokemon
   function add(pokemon) {
-
-    //Validating whether all parameters are objects
+    //Validated whether all parameters are objects
     if(typeof pokemon === 'object' ){
-
-      //Validating Object.keys() to equal expected keys
+      //Validated Object.keys() to equal expected keys
       if(Object.keys(pokemon)[0] === 'name' &&
         Object.keys(pokemon)[1] === 'height' &&
         Object.keys(pokemon)[2] === 'type'){
@@ -36,45 +36,48 @@ let pokemonRepository = (function() {
     }
   }
 
-//Creating a function for the Array "pokemonList"
+  //Created a function for the Array "pokemonList"
   function getAll() {
     return pokemonList;
   }
+  //Created a function adding a button for each item of the pokemon list
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonListItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button-class');
+    pokemonListItem.appendChild(button);
+    pokemonList.appendChild(pokemonListItem);
+    button.addEventListener('click', function() {
+      showDetails(pokemon);
+    });
+  }
 
-//Returning the two functions
+  //Created a function to show pokemon list details
+  function showDetails(pokemon) {
+    console.log(pokemon.name);
+  }
+
+//Returned the four(4) functions inside the IIFE
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
+    showDetails: showDetails,
   };
 
 })();
 
-//Adding a Pokemon the to the list
+//Added a Pokemon the to the list
 pokemonRepository.add({
   name: 'Mewtwo',
   height: 2,
   type: 'Psy'
 });
+console.log(pokemonRepository.getAll());
 
-//Writing pokemonRepository as unordered list
-document.write('<ul>');
-
-//Creating forEach loop
+//Created a forEach loop
 pokemonRepository.getAll().forEach(function(pokemon) {
-
-  //Writing pokemons as items of the unordered list pokemonList
-    document.write(`
-      <li class="pokemon-list__item">
-        ${pokemon.name} ${' mesures '} ${pokemon.height} ${'meters: '}
-    `);
-
-  //Creating "if....else" condition
-  if(pokemon.height > 3.5) {
-    document.write(' Wow, that\'s big! :) ');
-  } else if(pokemon.height <= 3.5) {
-    document.write(' Oh, that\'s not so big :( ');
-  }
-})
-  document.write('</li>')
-
-document.write('</ul>');
+  pokemonRepository.addListItem(pokemon);
+});

@@ -1,60 +1,65 @@
 
+/* Creating body design */
 body  {
   background-color: lightgray;
 }
 
+/* Creating design for title */
 h1 {
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   color: #FF4A2A;
   font-size: 40px;
   text-decoration-line: underline;
-
 }
 
-.pokemon-list {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  font-family: garamond;
-  font-size: 25px;
-  list-style-type: none;
-  color: #2A44FF ;
-  padding: 60px;
-  margin: auto;
-  border-radius: 20px;
+/* Removing bullet point besides pokemon list buttons */
+li {
+    list-style-type: none;
 }
 
-button {
+/* Creating design of pokemon list */
+.button-class {
   display:flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
+  font-size: 60px;
+  color: #2A44FF ;
+  font-family: 'Chilanka', cursive;
+  padding: 60px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-align: center;
   background-color: #2AFF8B;
-  width: 75%;
+  width: 50%;
 }
 
-@supports (display: flex) {
-  .pokemon-list {
+/* Setting default display*/
+@supports (display: none) {
+  .button-class {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-
+/* Setting mobile responsivity */
 @media all and (max-width: 500px) {
-  .pokemon-list {
+  .button-class {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 500px) and (max-width: 900px){
-  .pokemon-list {
-    display: grid;
+  .button-class {
     text-align: center;
-    margin:auto;
+    margin: auto;
     width: 75%;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
+    /* font-size: 30px; */
   }
 }
 @media all and (max-width: 900px) {
@@ -63,4 +68,5 @@ button {
     text-align: center;
     margin:auto;
     grid-gap: 10px;
+  }
 }
