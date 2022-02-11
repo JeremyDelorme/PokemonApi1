@@ -1,47 +1,53 @@
+/*
+Body Background Color (Dark Red): #800700
+Header 1 Text Color (Yellow): #F6A80B
+Buttons Background Color (Brown): #672302
+Buttons Text Color (Yellow): #F6A80B
+*/
 
-/* Creating body design */
+/* Created body design */
 body  {
-  background-color: lightgray;
+  background-color: #800700;
 }
 
-/* Creating design for title */
+/* Created design for title */
 h1 {
   text-align: center;
-  color: #FF4A2A;
-  font-size: 40px;
+  color: #F6A80B;
+  font-size: 75px;
   text-decoration-line: underline;
 }
 
-/* Removing bullet point besides pokemon list buttons */
+/* Removed bullet point besides pokemon list buttons */
 li {
     list-style-type: none;
 }
 
-/* Creating design of pokemon list */
+/* Created design of pokemon list */
 .button-class {
   display:flex;
   justify-content: center;
   text-align: center;
   font-size: 60px;
-  color: #2A44FF ;
-  font-family: 'Chilanka', cursive;
-  padding: 60px;
+  color: #F6A80B ;
+  font-family: "Chilanka", cursive;
+  padding: 40px;
   margin: auto;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 40px;
   text-align: center;
-  background-color: #2AFF8B;
-  width: 50%;
+  background-color: #672302;
+  width: 25%;
 }
 
-/* Setting default display*/
+/* Setted default display*/
 @supports (display: none) {
   .button-class {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-/* Setting mobile responsivity */
+/* Setted mobile responsivity */
 @media all and (max-width: 500px) {
   .button-class {
     display: flex;
