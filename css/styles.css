@@ -36,6 +36,20 @@ li {
     list-style-type: none;
 }
 
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  min-width: 75px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+}
+
 .pokemon-list {
   display: flex;
   flex-direction: row;
@@ -45,7 +59,7 @@ li {
 /* Created design of buttons */
 .button-class {
   display: block;
-  text-align: : center;
+  text-align: center;
   font-family: 'Autour One', cursive;
   font-size: 23px;
   color: #000;
@@ -56,40 +70,3 @@ li {
   width: 200px;
   height: 100px;
 }
-
-
-
-
-/* Setted default display*/
-/* @supports (display: none) {
-  .button-class {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-/* Setted mobile responsivity */
-/* @media all and (max-width: 500px) {
-  .button-class {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 15px;
-
-    grid-template-columns: 1fr;
-  }
-}
-@media all and (min-width: 500px) and (max-width: 900px){
-  .button-class {
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-    font-size: 35px;
-  }
-}
-@media all and (max-width: 900px) {
-  .pokemon-list {
-    display: grid;
-    text-align: center;
-    margin:auto;
-    grid-gap: 10px;
-  }
-} */ */
