@@ -1,19 +1,32 @@
 /*
-Body Background Color (Dark Red): #800700
-Header 1 Text Color (Yellow): #F6A80B
-Buttons Background Color (Brown): #672302
-Buttons Text Color (Yellow): #F6A80B
+Body Background Color (White): #FFF;
+Header Background color (Salmon): #F16B56;
+Title Text Color (Black): #000;
+Buttons Background Color (Yellow): #F6A80B;
+Buttons Text Color (Black): #000;
 */
 
 /* Created body design */
 body  {
-  background-color: #800700;
+  background-color: white;
+  margin-top: -5px;
+  font-family: 'Varela Round', sans-serif;
 }
 
+header {
+  background-color: #F16B56;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
 /* Created design for title */
 h1 {
   text-align: center;
-  color: #F6A80B;
+  color: #000;
   font-size: 75px;
   text-decoration-line: underline;
 }
@@ -23,37 +36,44 @@ li {
     list-style-type: none;
 }
 
-/* Created design of pokemon list */
-.button-class {
-  display:flex;
+.pokemon-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-  font-size: 60px;
-  color: #F6A80B ;
-  font-family: "Chilanka", cursive;
-  padding: 40px;
-  margin: auto;
-  margin-bottom: 20px;
-  border-radius: 40px;
-  text-align: center;
-  background-color: #672302;
-  width: 25%;
+}
+/* Created design of buttons */
+.button-class {
+  display: block;
+  text-align: : center;
+  font-family: 'Autour One', cursive;
+  font-size: 23px;
+  color: #000;
+  border-color: #56DFF1;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #F6A80B;
+  width: 200px;
+  height: 100px;
 }
 
+
+
+
 /* Setted default display*/
-@supports (display: none) {
+/* @supports (display: none) {
   .button-class {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 /* Setted mobile responsivity */
-@media all and (max-width: 500px) {
+/* @media all and (max-width: 500px) {
   .button-class {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
 
     grid-template-columns: 1fr;
   }
@@ -61,11 +81,8 @@ li {
 @media all and (min-width: 500px) and (max-width: 900px){
   .button-class {
     text-align: center;
-    margin: auto;
-    width: 75%;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    /* font-size: 30px; */
+    font-size: 35px;
   }
 }
 @media all and (max-width: 900px) {
@@ -75,4 +92,4 @@ li {
     margin:auto;
     grid-gap: 10px;
   }
-}
+} */ */
