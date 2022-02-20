@@ -1,4 +1,4 @@
-Pokedex APP
+**Pokedex APP**
 
 This is my first JavaScript Project.
 
