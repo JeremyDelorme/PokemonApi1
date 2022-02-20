@@ -1,6 +1,6 @@
-//BEGGINNING OF POKEMON REPOSITORY SCRIPT
+//BEGGINNING OF IIFE FOR POKEMON REPOSITORY -->
 
-//BEGGINNING OF IIFE FOR POKEMON REPOSITORY
+//BEGGINNING OF POKEMON REPOSITORY SCRIPT -->
 let pokemonRepository = (function() {
   //Assigned an Array to the variable 'pokemonList'
   let pokemonList = [];
@@ -25,21 +25,31 @@ let pokemonRepository = (function() {
 
   //Created a function to add a button for each pokemon from the apiUrl
   function addListItem(pokemon) {
+    //Assigned the variable 'expandablePokemonList' to the pokemon-list class
     let expandablePokemonList = document.querySelector('.pokemon-list');
+    //Created the variable 'listItem' from list elements
     let listItem = document.createElement('li');
+    //Added the class 'listItem-style' to the 'listItem' variable
     listItem.classList.add('listItem-style');
 
+    //Created the variable 'openModalButton' from the 'button' class
     let openModalButton = document.createElement('button');
-    openModalButton.innerText = pokemon.name;
+    //Defined Text inside the Button
+    openModalButton.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+    //Added classes to the openModalButton variable
     openModalButton.classList.add("button-class", "btn", "btn-primary", "btn-sm");
 
+    //Added the data toggle to trigger the modal
     openModalButton.setAttribute('data-toggle', 'modal');
+    //Added the data target to trigger the modal
     openModalButton.setAttribute('data-target', '#pokemonModal');
 
+    //Appended 'openModalButton' to 'listItem'
     listItem.appendChild(openModalButton);
+    //Appended 'listItem' to 'expandablePokemonList'
     expandablePokemonList.appendChild(listItem);
 
-
+    //Added an Event Listener for when user clicks on each Pokemon
     openModalButton.addEventListener('click', function() {
       showDetails(pokemon);
     })
@@ -52,7 +62,7 @@ let pokemonRepository = (function() {
     });
   }
 
-  //Created a function to LOAD LIST of the pokemon List from apiUrl
+  //Created a function to LOAD the LIST of pokemon List from apiUrl
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -96,9 +106,9 @@ let pokemonRepository = (function() {
   }
 
 
-//END OF POKEMON REPOSITORY SCRIPT
+//<-- END OF POKEMON REPOSITORY SCRIPT
 
-//BEGGINNING OF MODAL SCRIPT
+//BEGGINNING OF MODAL SCRIPT -->
 
   //Create a Function to SHOW the Modal with the POKEMON DETAILS
   function showModal(pokemon) {
@@ -112,45 +122,27 @@ let pokemonRepository = (function() {
 
 
     //Modal Header
-    let titleElement = $('<h1>' + pokemon.name + '</h1>');
-    let heightElement = $('<p>' + pokemon.height + '</p>');
-    let weightElement = $('<p>' + pokemon.weight + '</p>');
-    let typesElement = $('<p>' + pokemon.types + '</p>');
+    let titleElement = $('<h1>' + pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) + '</h1>');
+    let heightElement = $('<p>' + 'Height: ' + pokemon.height + ' cm' + '</p>');
+    let weightElement = $('<p>' + 'Weight: ' + pokemon.weight + ' pounds' + '</p>');
+    let typesElement = $('<p>' + 'Types: ' + pokemon.types + '</p>');
 
     let imageElement = $('<img class="modal-img" style="width:50%">');
     imageElement.attr("src", pokemon.imgUrl);
 
 
-    //Appendoing elements to modalBody
+    //Appending titleElement to the modalTitle
     modalTitle.append(titleElement);
-
+    //Appending elements to modalBody
     modalBody.append(imageElement);
     modalBody.append(heightElement);
     modalBody.append(weightElement);
     modalBody.append(typesElement);
   }
 
-  // END OF MODAL CONTENT
+  //<-- END OF MODAL SCRIPT
 
-  // //Created a Function To HIDE the Modal
-  // function hideModal() {
-  //   //Made a variable out of 'modal-container' html class
-  //   let modalContainer = document.querySelector('#modal-container');
-  //   //Removed the CSS class 'is-visible' when the Modal is hidden
-  //   modalContainer.classList.remove('is-visible');
-  // }
-
-//Created a Function for CLOSING Modal through ESCAPE BUTTON
-  window.addEventListener('keydown', (e) => {
-    //Calling back Modal Container Function
-    let modalContainer = document.querySelector('#modal-container');
-    //Adding Condition: if KEY = ESCAPE
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }
-  });
-
-//Returned the four(6) Functions inside the IIFE
+//Returned the six(6) Functions inside the IIFE
   return {
     add: add,
     getAll: getAll,
@@ -160,7 +152,8 @@ let pokemonRepository = (function() {
     showDetails: showDetails
   };
 })();
-//END OF IIFE FOR POKEMON REPOSITORY
+
+//<-- END OF IIFE FOR POKEMON REPOSITORY
 
 //Loaded list of Pokemons
 pokemonRepository.loadList().then(function () {

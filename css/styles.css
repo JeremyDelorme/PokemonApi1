@@ -1,4 +1,4 @@
-/* LIST OF COLORS AND FONTS
+/* LIST OF COLORS
 
 Background Color (White): #fff;
 NavBar Color (Salmon): #ff4f7e;
@@ -6,6 +6,8 @@ Buttons color (Yellow): #F6A80B
 Primary Color (Blue): #4fc1ff;
 
 */
+
+/* BEGGINNING OF GENERAL DESIGN --> */
 
 header {
   text-align: center;
@@ -17,6 +19,18 @@ body  {
   font-family: 'Varela Round', sans-serif;
 }
 
+/* <-- END OF GENERAL DESIGN */
+
+/* BEGGINNING OF NAVBAR DESIGN --> */
+
+.navbar-custom {
+  background-color: #ff4f7e;
+}
+
+/* <-- END OF NAVBAR DESIGN */
+
+/* BEGGINNING OF MAIN SECTION DESIGN --> */
+
 .pokemon-list {
   display: flex;
   flex-direction: row;
@@ -25,6 +39,8 @@ body  {
 }
 
 .listItem-style {
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -33,13 +49,8 @@ body  {
   border-radius: 10px;
 }
 
-.navbar-custom {
-  background-color: #ff4f7e;
-}
-
 .button-class {
   display: block;
-  text-align: center;
   font-family: 'Autour One', cursive;
   font-size: 23px;
   color: #000;
@@ -51,11 +62,14 @@ body  {
   height: 100px;
 }
 
-/* MODAL DESIGN */
+/* <--END OF MAIN SECTION DESIGN */
+
+/* BEGGINNING OF MODAL DESIGN --> */
 
 .modal-header {
   background-color: #4fc1ff;
 }
+
 .modal-body {
 
 }
@@ -65,9 +79,9 @@ body  {
 
 
 .modal h1 {
-  margin-top: 0;
   color: #000;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .modal p {
@@ -83,4 +97,4 @@ body  {
   max-width: 150px;
 }
 
-/* END OF MODAL STYLE */ */
+/* <-- END OF MODAL DESIGN  */
