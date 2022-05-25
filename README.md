@@ -1,7 +1,13 @@
-**Pokedex APP**
+**PODEDEX APPLICATION**
 
-This is my first JavaScript Project.
+Simple Pokemon App built with HTML, CSS, JavaScript and external libaries Jquery and Bootstrap
+Pokédex application that loads data from an external API and enables the viewing of data points in detail. Furthermore a search bar was implemented sorting out Pokemons by name.
 
-It consists of a Pokedex App which retrieves information from an API to display on a usable and responsive app. For this App, I used HTML, CSS and JS, along with external libraries like Bootstrap and JQuery.
+**TECHNOLOGIES**
+1.HTML
+2.CSS
+3.Vanilla Javascript
 
-Simply click on any of the 150 Pokemons, and details about them will show.
+**EXTERNAL LIBRARIES**
+1. Bootstrap
+2. JQUERY
