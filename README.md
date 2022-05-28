@@ -35,4 +35,4 @@ The app uses Bootstrap for styling purposes.
 
 ## LIVE DEMO LINK
 
-
+https://jeremydelorme.github.io/PokemonApi1/
