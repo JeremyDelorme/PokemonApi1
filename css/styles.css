@@ -14,9 +14,12 @@ header {
 }
 
 body {
-  background-color: #fff;
-  margin-top: 100px;
-  font-family: "Varela Round", sans-serif;
+  /* margin-top: 100px;
+  font-family: "Varela Round", sans-serif; */
+}
+
+.container {
+  background-color: #f6a80b;
 }
 
 /* <-- END OF GENERAL DESIGN */
@@ -73,7 +76,7 @@ body {
 .modal-body {
 }
 .modal-footer {
-  background-color: #4fc1ff;
+  background-color: #d9ff4f;
 }
 
 .modal h1 {
