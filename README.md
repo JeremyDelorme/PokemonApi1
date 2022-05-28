@@ -21,6 +21,12 @@ The app uses Bootstrap for styling purposes.
 - Bootstrap
 - JQUERY
 
+## WHAT IT LOOKS LIKE
+
+![Screenshot 1](img/screenshot_1.png)
+
+![Screenshot 2](img/screenshot_2.png)
+
 ## Key Features
 
 - Load data from an external source (API)
