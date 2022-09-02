@@ -57,18 +57,20 @@ body {
   height: 100px;
 }
 
+.button-class:hover {
+  background-color: rgb(247, 178, 232);
+}
+
 /* <--END OF MAIN SECTION DESIGN */
 
 /* BEGGINNING OF MODAL DESIGN --> */
 
 .modal-header {
-  background-color: #ffeb91;
+  background-color: rgb(247, 178, 232);
 }
 
-.modal-body {
-}
 .modal-footer {
-  background-color: #ffeb91;
+  background-color: rgb(247, 178, 232);
 }
 
 .modal h1 {
