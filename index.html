@@ -11,13 +11,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Lato&family=Varela+Round&display=swap"
     rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Chilanka&family=Lato&family=Shizuru&family=Varela+Round&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Autour+One&family=Chilanka&family=Lato&family=Shizuru&family=Varela+Round&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&display=swap" />
   <link rel="stylesheet" type="text/css" href="src/css/styles.css" />
 </head>
 
@@ -36,14 +30,16 @@
 
   <main>
     <div class="list-container">
-      <ul class="pokemon-list list-unstyled"></ul>
+      <ul class="pokemon-list list-unstyled">
+        <!-- Add more Pokémon cards as needed -->
+      </ul>
     </div>
 
     <!-- MODAL -->
     <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel"
       aria-hidden="true">
       <div class="modal-dialog d-flex justify-content-center" role="document">
-        <div class="modal-content ">
+        <div class="modal-content">
           <div class="modal-header">
             <div class="modal-title" id="pokemonModalLabel"></div>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -75,6 +71,7 @@
   <script src="src/js/fetch-polyfill.js"></script>
   <script src="dist/minify.js"></script>
   <script src="src/js/tota11y.min.js"></script>
+  <script src="src/js/generate-cards.js"></script>
 </body>
 
 </html>

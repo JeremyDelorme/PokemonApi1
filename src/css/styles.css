@@ -1,21 +1,25 @@
-/* LIST OF COLORS
-
-Background Color (White): #fff;
-NavBar Color (Salmon): #ff4f7e;
-Buttons color (Yellow): #F6A80B
-Primary Color (Blue): #4fc1ff;
-
-*/
-
 /* BEGGINNING OF GENERAL DESIGN --> */
 
 header {
   text-align: center;
+  font-family: 'Josefin Slab', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px; /* You can adjust the height as needed */
+  justify-content: center;
 }
 
+header h1 {
+  margin: 0; /* Remove default margin to prevent spacing */
+}
+
+
+
+
 body {
-  background-color: rgb(255, 245, 225);
-  margin-top: 100px;
+  background-color: #FFFBF0; /* White background */
+  margin-top: 10px;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -24,7 +28,7 @@ body {
 /* BEGGINNING OF NAVBAR DESIGN --> */
 
 .navbar-custom {
-  background-color: #ffc74f;
+  background-color: #ffa600; /* Salmon color for navbar */
 }
 
 /* <-- END OF NAVBAR DESIGN */
@@ -38,58 +42,109 @@ body {
   justify-content: center;
 }
 
-.listItem-style {
+.pokemon-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #ff4f7e; /* Salmon background */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin: 20px;
+  width: 200px;
+  height: 250px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.motif {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: #f6a80b; /* Yellow motif */
 }
 
 .button-class {
   display: block;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 23px;
-  color: #000;
-  border-color: #56dff1;
+  font-family: 'Josefin Slab', sans-serif; /* Use 'Josefin Slab' font */
+  font-size: 28px;
+  color: #FFFBF0; /* White text color */
   margin: 20px;
-  border-radius: 10px;
-  background-color: #f6a80b;
+  border-radius: 4px;
+  background-color: #dbc12b; /* Primary blue button color */
   width: 200px;
-  height: 100px;
+  height: 200px;
+  border: none;
+  font-weight: bold;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .button-class:hover {
-  background-color: rgb(247, 178, 232);
+  background-color: rgb(255, 228, 249); /* Lighter blue on hover */
+  color: #6b6b6b; /* White text color */
+  font-weight: bold;
 }
 
 /* <--END OF MAIN SECTION DESIGN */
 
-/* BEGGINNING OF MODAL DESIGN --> */
+/* Modal Design */
+.modal {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: #f6a80b; /* Yellow modal background */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
 .modal-header {
-  background-color: rgb(247, 178, 232);
+  background-color: rgb(255, 228, 249); /* Salmon color for the header */
+  color: #FFFBF0; /* White text color */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 15px;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #5f2e00;
+}
+
+.modal-body {
+  padding: 15px;
+  text-align: center;
+  background-color: #dbc12b; /* Yellow modal body background */
+  color: #6b6b6b;
 }
 
 .modal-footer {
-  background-color: rgb(247, 178, 232);
+  background-color: rgb(255, 228, 249);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
 }
 
-.modal h1 {
-  color: #000;
-  display: flex;
-  justify-content: center;
+.modal-footer button {
+  background-color: #f6a80b; /* Yellow button background */
+  color: #FFFBF0; /* White text color for buttons */
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.modal p {
-  display: flex;
-  justify-content: center;
-  font-size: 40px;
+.modal-footer button:hover {
+  background-color: #FFFBF0; /* White button background on hover */
+  color: #ff4f7e; /* Salmon text color on hover */
 }
 
-.modal-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 150px;
-}
-
-/* <-- END OF MODAL DESIGN  */
